@@ -523,6 +523,7 @@ LOOP:
 					break LOOP
 				}
 			}
+			break LOOP //临时解决方案
 
 		case outPkg = <-s.wQ:
 			if flag {
