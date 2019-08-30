@@ -523,8 +523,7 @@ LOOP:
 					break LOOP
 				}
 			}
-			break LOOP //临时解决方案
-
+			time.Sleep(100 * time.Millisecond) //todo 临时处理
 		case outPkg = <-s.wQ:
 			if flag {
 				if err = s.writer.Write(s, outPkg); err != nil {
